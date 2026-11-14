@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code — CRIAÇÕES · Consciência Negra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Archivo:wght@400;600;700&family=Archivo+Mono&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F4EBD8;--ink:#1D150C;--terra:#C4502B}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Archivo",system-ui,sans-serif;background:var(--paper);color:var(--ink);min-height:100svh;display:grid;place-items:center;padding:24px}
+  .sheet{text-align:center;max-width:520px;background:#FFF9EC;border:2px solid var(--ink);border-radius:32px;padding:44px 34px;box-shadow:0 30px 60px -30px rgba(29,21,12,.45)}
+  .mark{width:34px;height:34px;color:var(--terra)}
+  .kicker{font-family:"Archivo Mono",monospace;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--terra);font-weight:700;margin-top:12px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:2.6rem;line-height:1.05;margin-top:10px}
+  h1 em{font-style:italic;color:var(--terra)}
+  p{margin-top:12px;color:#5C4E38}
+  .qrbox{margin:26px auto 6px;width:min(320px,78vw)}
+  .qrbox img{width:100%;height:auto;border-radius:18px;background:#fff}
+  .url{font-family:"Archivo Mono",monospace;font-size:.7rem;word-break:break-all;color:#5C4E38;max-width:340px;margin:10px auto 0}
+  .actions{margin-top:26px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  a.btn,button.btn{font:inherit;font-weight:700;border-radius:999px;padding:13px 22px;cursor:pointer;text-decoration:none}
+  .btn-dark{background:var(--ink);color:var(--paper);border:0}
+  .btn-line{border:2px solid var(--ink);color:var(--ink);background:transparent}
+  @media print{
+    body{background:#fff;padding:0}
+    .sheet{box-shadow:none;border-width:3px}
+    .actions{display:none}
+  }
+</style>
+</head>
+<body>
+  <main class="sheet">
+    <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,10 92,88 8,88" fill="currentColor"/></svg>
+    <p class="kicker">Consciência Negra · Projeto escolar</p>
+    <h1>Inventado por<br><em>mãos negras</em></h1>
+    <p>Pirâmides · Tear · Arado — aponte a câmera do celular e conheça as criações e quem as criou.</p>
+    <div class="qrbox"><img id="qr" alt="QR Code para abrir o site Criações" width="640" height="640"></div>
+    <p class="url" id="url"></p>
+    <div class="actions">
+      <button class="btn btn-dark" onclick="window.print()">Imprimir para o cartaz</button>
+      <a class="btn btn-line" href="index.html">Voltar ao site</a>
+    </div>
+  </main>
+<script>
+  // O QR aponta para a página inicial do site, no mesmo endereço desta página.
+  var home = window.location.href.replace(/qr\.html.*$/, "index.html");
+  document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?size=640x640&margin=10&data=" + encodeURIComponent(home);
+  document.getElementById("url").textContent = home;
+</script>
+</body>
+</html>
