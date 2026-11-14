@@ -21,9 +21,10 @@ assets/js/app.js      animações suaves, contadores, parallax leve e QR dinâmi
 assets/img/           6 imagens do Wikimedia Commons + manifest.json com licença e fonte de cada uma
 ```
 
-## Design
-- Direção: “vitrine de museu / lançamento de produto” — palco escuro para cada criação (referência: páginas de produto premiadas no Awwwards, como Apple AirPods Pro — narrativa por scroll, produto como herói, ficha técnica como especificação), paleta papel/areia com um acento por criação (terracota, lápis-lazúli, verde-Nilo), tipografia editorial Fraunces + Archivo.
-- Mobile first: pensado para quem chega pelo QR no celular (360–390 px), com navegação fixa inferior, animações suaves com `prefers-reduced-motion` respeitado e imagens otimizadas (~1,2 MB no total).
+## Design (v2 — redesign pós-feedback)
+- Direção: **“uma parede de tumba lida como catálogo de museu”**. A página se organiza em registros horizontais como as paredes de tumba egípcias, cada um fechado por uma linha de chão; o hero traz a grade vermelha de proporção que os artistas riscavam na parede; os registros se costuram por uma faixa tecida (trama + hachura de campo); o nome de cada criador aparece dentro de um cartucho (shenu); a ficha de produto vira etiqueta de objeto de museu encostada na imagem. Um único acento (vermelho-ocre), duas famílias (Fraunces + Archivo), fotos em duotono terroso que revelam a cor no hover/toque.
+- Referências nomeadas e o que foi aproveitado de cada uma: arquivo `referencias.md` (UNESCO Virtual Museum/Francis Kéré no Awwwards, Grand Egyptian Museum, NMAAHC de Adjaye/Freelon, arte egípcia de registros e cartucho, bogolan do Mali, etiquetas de objeto do Wellcome, índice editorial premiado).
+- Mobile first: pensado para quem chega pelo QR no celular (360–390 px), navegação inferior reta, movimento contido (revelar e assentar; `prefers-reduced-motion` respeitado) e imagens otimizadas (~1,2 MB no total).
 
 ## Fontes do conteúdo
 Listadas na seção “Fontes e créditos” do próprio site (World History Encyclopedia, Purdue University, Wikipedia e Met Museum/Wikimedia Commons para as imagens).
