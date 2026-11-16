@@ -1,12 +1,5 @@
 [
  {
-  "file": "piramides-gize.jpg",
-  "source_title": "File:The Great Pyramid of Giza with a Camel in the Foreground.jpg",
-  "license": "CC BY-SA 4.0",
-  "artist": "Sphotography13",
-  "page": "https://commons.wikimedia.org/wiki/File:The_Great_Pyramid_of_Giza_with_a_Camel_in_the_Foreground.jpg"
- },
- {
   "file": "piramide-degraus.jpg",
   "source_title": "File:Saqqara, Pyramid of Djoser, Ancient Egypt.jpg",
   "license": "CC BY 4.0",
@@ -21,24 +14,45 @@
   "page": "https://commons.wikimedia.org/wiki/File:Bronze_statue_of_Imhotep,_Egypt,_600-30_BCE_Wellcome_L0057137.jpg"
  },
  {
-  "file": "tear-tecelas.jpg",
-  "source_title": "File:Weavers, Tomb of Khnumhotep MET DT204509.jpg",
-  "license": "CC0",
-  "artist": "Norman de Garis Davies",
-  "page": "https://commons.wikimedia.org/wiki/File:Weavers,_Tomb_of_Khnumhotep_MET_DT204509.jpg"
+  "file": "tear-kente.jpg",
+  "source_title": "File:A kente weaver at work.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Kwameghana (Bright Kwame Ayisi)",
+  "page": "https://commons.wikimedia.org/wiki/File:A_kente_weaver_at_work.jpg"
  },
  {
-  "file": "arado-sennedjem.jpg",
-  "source_title": "File:Maler der Grabkammer des Sennudem 001.jpg",
-  "license": "Public domain",
-  "artist": "Painter of the burial chamber of Sennedjem",
-  "page": "https://commons.wikimedia.org/wiki/File:Maler_der_Grabkammer_des_Sennudem_001.jpg"
+  "file": "tear-akwete.jpg",
+  "source_title": "File:African woman handweaving akwete cloth 01.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "OBankz (Ekekeh Ubadire Obioma)",
+  "page": "https://commons.wikimedia.org/wiki/File:African_woman_handweaving_akwete_cloth_01.jpg"
  },
  {
-  "file": "arado-djar.jpg",
-  "source_title": "File:Laden Donkeys and Ploughing, Tomb of Djar MET 31.6.2 EGDP013009.jpg",
-  "license": "CC0",
-  "artist": "Nina M. Davies",
-  "page": "https://commons.wikimedia.org/wiki/File:Laden_Donkeys_and_Ploughing,_Tomb_of_Djar_MET_31.6.2_EGDP013009.jpg"
+  "file": "arado-etiopia.jpg",
+  "source_title": "File:ILRI, Stevie Mann - Ploughing with cattle in southwestern Ethiopia.jpg",
+  "license": "CC BY 2.0",
+  "artist": "ILRI/Stevie Mann",
+  "page": "https://commons.wikimedia.org/wiki/File:ILRI,_Stevie_Mann_-_Ploughing_with_cattle_in_southwestern_Ethiopia.jpg"
+ },
+ {
+  "file": "capa-gize.jpg",
+  "source_title": "File:Great Pyramid of Giza.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "kallerna",
+  "page": "https://commons.wikimedia.org/wiki/File:Great_Pyramid_of_Giza.jpg"
+ },
+ {
+  "file": "tear-detalhe.jpg",
+  "source_title": "File:Beautiful kente weaving design.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Kwameghana (Bright Kwame Ayisi)",
+  "page": "https://commons.wikimedia.org/wiki/File:Beautiful_kente_weaving_design.jpg"
+ },
+ {
+  "file": "arado-tigray.jpg",
+  "source_title": "File:Field Ploughing, Tigray (14424613203).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "Rod Waddington",
+  "page": "https://commons.wikimedia.org/wiki/File:Field_Ploughing,_Tigray_(14424613203).jpg"
  }
 ]

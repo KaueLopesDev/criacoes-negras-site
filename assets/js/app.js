@@ -1,5 +1,5 @@
-/* CRIAÇÕES v2 — movimento contido e tipográfico:
-   revelar e assentar, figuras reveladas por máscara, linha de chão que se desenha, QR dinâmico */
+/* CRIAÇÕES v5 — movimento contido e tipográfico:
+   revelar e assentar, progresso em um fio, QR dinâmico */
 (function () {
   "use strict";
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -14,8 +14,8 @@
   }
   if (qrUrl) qrUrl.textContent = pageUrl;
 
-  /* ---------- Revelação por rolagem (seções + linhas de chão) ---------- */
-  var targets = document.querySelectorAll(".reveal, .groundline");
+  /* ---------- Revelação por rolagem ---------- */
+  var targets = document.querySelectorAll(".reveal");
   if (reduceMotion || !("IntersectionObserver" in window)) {
     targets.forEach(function (el) { el.classList.add("in"); });
   } else {
@@ -27,7 +27,7 @@
     targets.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- O cordão vermelho: progresso de leitura ---------- */
+  /* ---------- A faixa dourada: progresso de leitura ---------- */
   var progress = document.getElementById("progress");
   var ticking = false;
   function onScroll() {

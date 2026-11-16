@@ -3,52 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QR Code — CRIAÇÕES · Consciência Negra</title>
+<title>Cartaz QR — CRIAÇÕES · Inventado por mãos negras</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@900&family=Archivo:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--paper:#F4EBD8;--ink:#1D150C;--terra:#B3401E}
+  /* v6 — cartaz no sistema editorial do site, faixa de tecido bogolan: papel, tinta, um acento, filetes dourados.
+     O conteúdo é o do cartaz (título + chamada); o layout é o do site. */
+  :root{ --paper:#F4ECDC; --sheet:#FBF6E9; --ink:#221607; --ink-soft:#57432C;
+         --accent:#B3401E; --gold:#C99A3C; }
   *{margin:0;padding:0;box-sizing:border-box}
-  html,body{overflow-x:clip}
-  body{font-family:"Archivo",system-ui,sans-serif;background:var(--paper);color:var(--ink);min-height:100svh;display:grid;place-items:center;padding:24px}
-  .sheet{text-align:center;max-width:520px;background:#FFF9EC;border:2px solid var(--ink);border-radius:32px;padding:44px 34px;box-shadow:0 30px 60px -30px rgba(29,21,12,.45)}
-  .mark{width:34px;height:34px;color:var(--terra)}
-  .kicker{font-family:"Archivo",sans-serif;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--terra);font-weight:700;margin-top:12px}
-  h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:2.6rem;line-height:1.05;margin-top:10px}
-  h1 em{font-style:italic;color:var(--terra)}
-  p{margin-top:12px;color:#5C4E38}
-  .qrbox{margin:26px auto 6px;width:min(320px,78vw)}
-  .qrbox img{width:100%;height:auto;border-radius:18px;background:#fff}
-  .url{font-family:"Archivo",sans-serif;font-size:.7rem;word-break:break-all;color:#5C4E38;max-width:340px;margin:10px auto 0}
-  .actions{margin-top:26px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  a.btn,button.btn{font:inherit;font-weight:700;border-radius:999px;padding:13px 22px;cursor:pointer;text-decoration:none}
-  .btn-dark{background:var(--ink);color:var(--paper);border:0}
-  .btn-line{border:2px solid var(--ink);color:var(--ink);background:transparent}
+  body{font-family:"Archivo",system-ui,sans-serif;background:var(--paper);color:var(--ink);
+    min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:28px 16px;-webkit-font-smoothing:antialiased}
+  .sheet{background:var(--sheet);border:2.5px solid var(--ink);outline:1.5px solid var(--ink);outline-offset:7px;
+    border-radius:4px;max-width:560px;width:100%;padding:44px 30px 34px;text-align:center}
+  .kicker{font-size:.7rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--accent)}
+  .rule{height:0;border-top:3px solid var(--gold);border-bottom:1px solid var(--gold);padding-bottom:2px;margin:18px auto;max-width:300px}
+  h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:clamp(2.1rem,8.5vw,3.2rem);line-height:1.02;letter-spacing:-.015em}
+  h1 .accent{color:var(--accent)}
+  .sub{margin-top:12px;font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:600;font-size:1.15rem;color:var(--ink)}
+  .call{margin-top:20px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;font-size:1.05rem;line-height:1.45}
+  .qrbox{margin:26px auto 8px;width:min(320px,78vw)}
+  .qrbox img{width:100%;height:auto;border:1.5px solid var(--ink);border-radius:4px;background:#fff}
+  .url{font-size:.78rem;color:var(--ink-soft);word-break:break-all;max-width:340px;margin:10px auto 0}
+  .weave{height:48px;max-width:560px;width:100%;margin-top:30px;
+    border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background-color:#EBDFC6;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 48'%3E%3Cpath d='M0 12 L12 4 L24 12 L36 4 L48 12 L60 4 L72 12 L84 4 L96 12' fill='none' stroke='%23221607' stroke-width='2.5'/%3E%3Crect x='18' y='18' width='12' height='12' transform='rotate(45 24 24)' fill='%23B3401E'/%3E%3Crect x='66' y='18' width='12' height='12' transform='rotate(45 72 24)' fill='none' stroke='%23221607' stroke-width='2.5'/%3E%3Ccircle cx='48' cy='24' r='3.5' fill='%23221607'/%3E%3Cpath d='M0 40 L12 32 L24 40 L36 32 L48 40 L60 32 L72 40 L84 32 L96 40' fill='none' stroke='%23221607' stroke-width='2.5'/%3E%3C/svg%3E");background-size:96px 48px;background-repeat:repeat-x;background-position:center}
+  .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  button,.btn{font:inherit;font-weight:800;font-size:.92rem;padding:12px 20px;border-radius:4px;cursor:pointer;text-decoration:none}
+  button{background:var(--accent);color:#FFF6E6;border:2px solid var(--accent)}
+  .btn{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+  .hint{margin-top:14px;font-size:.82rem;color:var(--ink-soft);max-width:420px;text-align:center}
   @media print{
     body{background:#fff;padding:0}
-    .sheet{box-shadow:none;border-width:3px}
-    .actions{display:none}
+    .actions,.hint{display:none}
+    .sheet{outline:none;box-shadow:none}
   }
 </style>
 </head>
 <body>
   <main class="sheet">
-    <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,10 92,88 8,88" fill="currentColor"/></svg>
-    <p class="kicker">Consciência Negra · Projeto escolar</p>
-    <h1>Inventado por<br><em>mãos negras</em></h1>
-    <p>Pirâmides · Tear · Arado — aponte a câmera do celular e conheça as criações e quem as criou.</p>
-    <div class="qrbox"><img id="qr" alt="QR Code para abrir o site Criações" width="640" height="640"></div>
-    <p class="url" id="url"></p>
-    <div class="actions">
-      <button class="btn btn-dark" onclick="window.print()">Imprimir para o cartaz</button>
-      <a class="btn btn-line" href="index.html">Voltar ao site</a>
-    </div>
+    <p class="kicker">Projeto escolar</p>
+    <div class="rule" aria-hidden="true"></div>
+    <h1>Consciência <span class="accent">Negra</span></h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="sub">Criações — inventado por mãos negras</p>
+    <p class="call">Aponte a câmera<br>e saiba mais sobre o projeto!</p>
+    <div class="qrbox"><img id="qrImg" alt="QR Code que abre o site do projeto" width="320" height="320"></div>
+    <p class="url" id="qrUrl"></p>
   </main>
+  <div class="weave" aria-hidden="true"></div>
+  <div class="actions">
+    <button type="button" onclick="window.print()">Imprimir o cartaz</button>
+    <a class="btn" href="index.html">Voltar ao site</a>
+  </div>
+  <p class="hint">O QR é gerado na hora a partir do endereço do site publicado — o cartaz funciona em qualquer hospedagem, sem editar nada.</p>
 <script>
-  // O QR aponta para a página inicial do site, no mesmo endereço desta página.
-  var home = window.location.href.replace(/qr\.html.*$/, "index.html");
-  document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?size=640x640&margin=10&data=" + encodeURIComponent(home);
-  document.getElementById("url").textContent = home;
+  (function () {
+    var siteUrl = new URL("index.html", window.location.href).href;
+    var img = document.getElementById("qrImg");
+    img.src = "https://api.qrserver.com/v1/create-qr-code/?size=640x640&margin=8&data=" + encodeURIComponent(siteUrl);
+    document.getElementById("qrUrl").textContent = siteUrl;
+  })();
 </script>
 </body>
 </html>
