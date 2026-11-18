@@ -197,6 +197,7 @@ code{font-size:.86em;background:rgba(34,22,7,.08);padding:1px 6px;border-radius:
 /* sobre o inventor */
 .inventor-flex{display:grid;gap:22px;margin-top:16px}
 .inventor-fig .fig-frame img{aspect-ratio:4/3.1}
+.inventor-fig--retrato .fig-frame img{aspect-ratio:2/3}
 .inventor-text h4{font-family:var(--font-display);font-weight:900;font-size:1.6rem;line-height:1.1;margin-bottom:6px}
 .inventor-text p{margin-top:13px;color:var(--ink-soft)}
 .inventor-text p strong{color:var(--ink)}
